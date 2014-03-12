@@ -1,4 +1,8 @@
-# NYTimes Objective-C Style Guide
+# TeaWhen Objective-C Style Guide
+
+This style guide is based on [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objective-c-style-guide).
+
+## NYTimes Objective-C Style Guide
 
 This style guide outlines the coding conventions of the iOS team at The New York Times. We welcome your feedback in [issues](https://github.com/NYTimes/objetive-c-style-guide/issues), [pull requests](https://github.com/NYTimes/objetive-c-style-guide/pulls) and [tweets](https://twitter.com/nytimesmobile). Also, [we're hiring](http://jobs.nytco.com/job/New-York-iOS-Developer-Job-NY/2572221/).
 
@@ -223,7 +227,8 @@ Block comments should generally be avoided, as code should be as self-documentin
 `init` methods should be structured like this:
 
 ```objc
-- (instancetype)init {
+- (instancetype)init
+{
     self = [super init]; // or call the designated initalizer
     if (self) {
         // Custom initialization
@@ -392,7 +397,8 @@ Text and example taken from the [Cocoa Naming Guidelines](https://developer.appl
 
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 ```objc
-+ (instancetype)sharedInstance {
++ (instancetype)sharedInstance
+{
    static id sharedInstance = nil;
 
    static dispatch_once_t onceToken;
