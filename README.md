@@ -58,15 +58,21 @@ UIApplication.sharedApplication.delegate;
 ## Spacing
 
 * Indent using 4 spaces. Never indent with tabs. Be sure to set this preference in Xcode.
+* Also trim whitespaces, and leave single empty line in EOF.
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
+* Leave a single empty line between control groups.
 
 **For example:**
 ```objc
 if (user.isHappy) {
-//Do something
+    //Do something
 }
 else {
-//Do something else
+    //Do something else
+}
+
+if (user.isHungry) {
+    // Another thing
 }
 ```
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but often there should probably be new methods.
